@@ -1,0 +1,1185 @@
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, svg, picture, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Nav Overlay Backdrop */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 99998;
+    backdrop-filter: blur(3px);
+}
+
+.nav-overlay.active {
+    display: block;
+}
+
+/* Mobile Nav Drawer Internals */
+.mobile-nav-header {
+    display: none;
+}
+
+.mobile-apply-btn {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Large Screens & Laptops (max-width: 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .headermid,
+    .tutmid,
+    .clattop,
+    .clatmid,
+    .ScholarshipMid,
+    .guidanceMid,
+    .clattop2,
+    .achieversmid,
+    .prepar,
+    .preparmid,
+    .studentmid,
+    .equipsmid,
+    .resouresMid,
+    .callmid,
+    .batchmid,
+    .materialMid,
+    .h1quteson > h1,
+    .questionsMid,
+    .featuresmid,
+    .Aboutmid,
+    .footermid {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .Telegrammid {
+        width: calc(100% - 40px);
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rightheader > ul {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .achieversmid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .batchmid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .preparmid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .materialMid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .Scholarshipleft > h1 {
+        font-size: 44px;
+        padding: 30px 0;
+    }
+
+    .Scholarshipimg {
+        max-width: 500px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets & Mobile Viewports (max-width: 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    /* Header Top Bar */
+    .topul {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .ultopleft {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ultopleft > li > a {
+        font-size: 13px;
+    }
+
+    .ultopleft > li > a > i {
+        padding: 0 8px;
+    }
+
+    .ultopright {
+        gap: 15px;
+    }
+
+    /* Main Navigation & Hamburger */
+    .rightheader {
+        display: none !important;
+    }
+
+    .headermid {
+        padding: 12px 15px;
+        justify-content: space-between;
+    }
+
+    .leftheader {
+        max-width: 120px;
+    }
+
+    .hearmanu {
+        display: block !important;
+        cursor: pointer;
+    }
+
+    .hearmanu > img {
+        width: 32px;
+        height: 32px;
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Mobile Nav Drawer */
+    .rightmeadiacon {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        max-width: 85vw;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 100000;
+        box-shadow: 5px 0 30px rgba(0, 0, 0, 0.25);
+        transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 20px;
+        overflow-y: auto;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .rightmeadiacon.showrightcon {
+        left: 0 !important;
+    }
+
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #EB1B0A;
+    }
+
+    .mobile-nav-header img {
+        max-width: 110px;
+    }
+
+    .close-nav-btn {
+        font-size: 22px;
+        color: #111D5F;
+        cursor: pointer;
+        padding: 5px;
+        transition: transform 0.2s;
+    }
+
+    .close-nav-btn:hover {
+        color: #EB1B0A;
+        transform: rotate(90deg);
+    }
+
+    .rightmeadiacon ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rightmeadiacon ul li {
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    .rightmeadiacon ul li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 5px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #111D5F;
+        text-decoration: none;
+        width: 100%;
+        transition: color 0.2s;
+    }
+
+    .rightmeadiacon ul li a:hover {
+        color: #EB1B0A;
+    }
+
+    .rightmeadiacon .magamaenu {
+        position: static !important;
+        display: block !important;
+        background-color: #f7f9fc !important;
+        padding: 8px 12px !important;
+        border-radius: 6px;
+        margin: 5px 0 10px 0;
+        box-shadow: none !important;
+    }
+
+    .rightmeadiacon .magamaenu p {
+        padding: 7px 0;
+        font-size: 13px;
+        color: #333333;
+        border-bottom: 1px dashed #e1e4e8;
+    }
+
+    .rightmeadiacon .magamaenu p:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-apply-btn {
+        display: block;
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background-color: #EB1B0A;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 0 10px 0 10px;
+        cursor: pointer;
+        font-size: 15px;
+        text-transform: capitalize;
+        transition: background 0.3s;
+    }
+
+    .mobile-apply-btn:hover {
+        background-color: #111D5F;
+    }
+
+    /* General Headings */
+    h1 {
+        font-size: 30px;
+        padding: 15px 0;
+        line-height: 1.3;
+    }
+
+    .clattop,
+    .clattop2 {
+        font-size: 22px;
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    /* Tutorial Section */
+    .tutmid {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .tutimg {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .tutcon > h1 {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    /* Course Cards (CLAT) */
+    .clatmid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    /* Scholarship */
+    .ScholarshipMid {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 35px 15px;
+        gap: 20px;
+    }
+
+    .Scholarshipleft {
+        text-align: center;
+    }
+
+    .Scholarshipleft > h1 {
+        font-size: 30px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .Scholarshipright > p {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .Scholarshipimg {
+        position: static !important;
+        max-width: 100% !important;
+        margin: 20px auto 0 !important;
+        text-align: center;
+    }
+
+    .Scholarshipimg > img {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    /* Program Title */
+    .programcontenar {
+        font-size: 42px;
+        text-align: center;
+        padding: 15px 10px;
+        word-break: break-word;
+    }
+
+    /* Guidance Section */
+    .guidanceMid {
+        flex-direction: column;
+        padding: 35px 15px;
+        gap: 30px;
+    }
+
+    .guidancemleft {
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .guidancemright > h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .guidanceConten {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Achievers */
+    .achieversmid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Student Testimonials */
+    .studentmid {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .stleft {
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    .stline {
+        display: none !important;
+    }
+
+    .starti > h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .starti > p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .starow {
+        justify-content: center;
+    }
+
+    .stright {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .clttimg2 {
+        margin: auto;
+    }
+
+    .Charvisingh {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .Charvisinghimg {
+        justify-content: center;
+    }
+
+    /* Video Testimonials */
+    .equipsmid {
+        flex-direction: column;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .equipItem {
+        width: 100%;
+        max-width: 480px;
+        margin: auto;
+    }
+
+    .vid-mid-link {
+        width: 90% !important;
+        max-width: 650px !important;
+    }
+
+    .vid-mid-link > iframe {
+        height: 320px !important;
+    }
+
+    /* Resources / Blog */
+    .preiImg {
+        flex-direction: column;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .preconten {
+        width: 100%;
+    }
+
+    .preconterITem2 {
+        width: 100%;
+    }
+
+    /* Call / Expert Form */
+    .callmid {
+        grid-template-columns: 1fr;
+        padding: 35px 15px;
+        gap: 25px;
+    }
+
+    .callleft {
+        max-width: 380px;
+        margin: auto;
+    }
+
+    .callright {
+        width: 100% !important;
+        max-width: 480px !important;
+        margin: auto;
+    }
+
+    /* Batches */
+    .batchmid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    /* FAQ */
+    .questionsMid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    .h1quteson > h1 {
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 26px;
+    }
+
+    /* Features Section */
+    .featuresmid {
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 35px 15px;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .featuresmleft {
+        width: 100%;
+    }
+
+    .featuresmright {
+        width: 100%;
+        text-align: center;
+    }
+
+    .featuresmright > img {
+        max-height: 280px;
+        width: auto;
+        margin: auto;
+    }
+
+    /* About Section & Tables */
+    .Aboutmid {
+        flex-direction: column;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .Ab-mi-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Ab-mi-left > img {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .Ab-mi-right {
+        width: 100%;
+    }
+
+    .ab-table,
+    .ab-table2 {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        margin: 15px 0;
+    }
+
+    .ab-table > table,
+    .ab-table2 > table {
+        min-width: 520px;
+        width: 100%;
+    }
+
+    /* Telegram Section */
+    .Telegrammid {
+        width: calc(100% - 30px) !important;
+        grid-template-columns: 1fr;
+        bottom: 0 !important;
+        margin: 35px auto !important;
+        border-radius: 20px;
+    }
+
+    .Tel-mid-ITem {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .Tel-mid-ITem > h1 {
+        text-align: center !important;
+        font-size: 26px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 15px 25px 15px !important;
+    }
+
+    .footermid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Handsets (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Top Bar */
+    .topul {
+        flex-direction: column;
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .ultopleft {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .ultopleft > li:nth-child(2) {
+        display: none;
+    }
+
+    .ultopleft > li > a {
+        font-size: 12px;
+    }
+
+    .ultopleft > li > a > i {
+        padding: 0 4px;
+    }
+
+    .ultopright {
+        gap: 15px;
+    }
+
+    .ultopright > li:nth-child(1) {
+        display: none;
+    }
+
+    .ultopright > li > a {
+        font-size: 16px;
+    }
+
+    /* Banner Switch */
+    .img1desk {
+        display: none !important;
+    }
+
+    .img2mead {
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Floating Brochure Button */
+    .dowbtn {
+        left: auto !important;
+        right: 15px !important;
+        bottom: 20px !important;
+        top: auto !important;
+        transform: none !important;
+        padding: 10px 18px !important;
+        font-size: 13px !important;
+        border-radius: 50px !important;
+        z-index: 9999 !important;
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.45) !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Brochure Form Popup */
+    .fromcon {
+        width: 90% !important;
+        max-width: 360px !important;
+        z-index: 100001;
+        border-radius: 12px;
+    }
+
+    .fromcon.showdowfro {
+        top: 50% !important;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 24px;
+        padding: 12px 0;
+    }
+
+    .clattop,
+    .clattop2 {
+        font-size: 17px;
+        padding-top: 30px;
+    }
+
+    .clttimg {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Tutorial Section */
+    .tutcon > h1 {
+        font-size: 22px;
+    }
+
+    .lawpre {
+        font-size: 17px;
+    }
+
+    .tutitem {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .tutitem > figure {
+        flex-shrink: 0;
+        width: 40px;
+    }
+
+    .tutitem > figure > img {
+        width: 100%;
+    }
+
+    .tutitem > article > h2 {
+        font-size: 16px;
+    }
+
+    .tutitem > article > p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Course Cards */
+    .clatmid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .clmiditem1,
+    .clmiditem2,
+    .clmiditem3,
+    .clmiditem4 {
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    /* Scholarship */
+    .Scholarshipleft > h1 {
+        font-size: 23px;
+    }
+
+    .Scholarshipright > p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Program Title */
+    .programcontenar {
+        font-size: 26px;
+        padding: 12px 10px;
+    }
+
+    /* Guidance Section */
+    .guidanceConten {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .guconItem {
+        gap: 12px;
+    }
+
+    .guconItem > figure {
+        flex-shrink: 0;
+        width: 36px;
+    }
+
+    .guconItem > article > h2 {
+        font-size: 16px;
+    }
+
+    .guconItem > article > p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Achievers (2 Columns on mobile) */
+    .achieversmid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .achiItem {
+        max-width: 100%;
+        background-size: contain;
+    }
+
+    .achiImg {
+        width: 100px;
+        padding: 40px 0 0 0;
+    }
+
+    .achiItem > h3 {
+        width: 110px;
+        font-size: 12px;
+        padding: 4px 0;
+    }
+
+    .achiItem > p {
+        font-size: 13px;
+    }
+
+    .achibtn {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+
+    /* Preparation Strategy */
+    .preparmid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .preparation > h1 {
+        font-size: 20px;
+    }
+
+    .prepar > h2 {
+        font-size: 17px;
+    }
+
+    .preparMIdItem {
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    .preparMIdItem > article > h2 {
+        font-size: 16px;
+    }
+
+    .preparMIdItem > article > p {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 8px 0;
+    }
+
+    /* Student Testimonials */
+    .starti > h2 {
+        font-size: 20px;
+    }
+
+    .Charvisingh {
+        font-size: 14px;
+        line-height: 23px;
+        padding: 10px 0;
+    }
+
+    .Charvisinghimg > h3 {
+        font-size: 16px;
+    }
+
+    /* Video Player */
+    .equipItem {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .equipItem > h3 {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .equ-vid-div > img:first-child {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .play-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .vid-mid-link > iframe {
+        height: 210px !important;
+    }
+
+    .vid-mid-link > i {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+        top: -12px;
+        right: -8px;
+    }
+
+    /* Resources / Blog */
+    .preconterITem {
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .preconterITem2 {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .preconterITem > article,
+    .preconterITem2 > article {
+        padding: 15px;
+    }
+
+    .preconterITem > article > h2 {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .preconterITem2 > article > h2 {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .preconterITem2 > article > p {
+        font-size: 13px;
+        line-height: 20px;
+        padding-bottom: 12px;
+    }
+
+    /* Call Form */
+    .callright > h2 {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .callright > form {
+        padding: 15px;
+    }
+
+    .callright > form > input {
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .callright > form > button {
+        width: 100%;
+        margin: 12px 0 0 0;
+    }
+
+    /* Batches (1 Column) */
+    .batchmid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .batchconter {
+        max-width: 380px;
+        margin: auto;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .betchItem {
+        padding: 15px;
+    }
+
+    .betchItem > h3 {
+        font-size: 17px;
+    }
+
+    .betchItem > p {
+        font-size: 13px;
+    }
+
+    .betchItem > ul > li {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .batchbtnview {
+        font-size: 15px;
+        padding: 8px 18px;
+        margin: 12px auto;
+        display: block;
+    }
+
+    /* Material */
+    .materialMid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .materaiLCOnter {
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 4px 0;
+    }
+
+    .materiItem > article > h3 {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .materiItem > article > p {
+        font-size: 13px;
+    }
+
+    /* FAQ */
+    .h1quteson > h1 {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .questionsContner {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .questionsContner > h2 {
+        font-size: 14px;
+        line-height: 1.4;
+        gap: 8px;
+    }
+
+    .questionsContner > p {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 10px 0 0 0;
+    }
+
+    /* Features Scroll */
+    .featuresmid {
+        margin: 20px 10px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .fea-m-le-scroll {
+        height: 300px;
+    }
+
+    .fea-m-le-scroll > h2 {
+        font-size: 18px;
+    }
+
+    .fea-m-le-scroll > h3 {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+
+    .fea-m-le-scroll > p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* About Section */
+    .Ab-mi-rig-cont > h2 {
+        font-size: 20px;
+    }
+
+    .Ab-mi-rig-cont > h3 {
+        font-size: 17px;
+    }
+
+    .Ab-mi-rig-cont > p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Telegram */
+    .Telegrammid {
+        width: calc(100% - 24px) !important;
+        margin: 20px auto !important;
+        border-radius: 14px;
+    }
+
+    .Tel-mid-ITem {
+        padding: 25px 12px;
+    }
+
+    .Tel-mid-ITem > h1 {
+        font-size: 20px;
+    }
+
+    .Tel-mid-ITem > p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .Tel-mid-ITem > button {
+        font-size: 14px;
+        padding: 9px 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 35px 12px 20px 12px !important;
+    }
+
+    .footermid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footerItem > figure {
+        margin: auto;
+    }
+
+    .foot-icon {
+        justify-content: center;
+    }
+
+    .impro,
+    .impro2 {
+        padding: 0;
+    }
+
+    .impro > li,
+    .impro2 > li {
+        padding: 5px 0;
+        justify-content: center;
+    }
+
+    .impro2 > li > a {
+        justify-content: center;
+    }
+
+    .impro > h2,
+    .impro2 > h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Extra Small Devices (max-width: 420px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 420px) {
+    .achieversmid {
+        grid-template-columns: 1fr;
+    }
+
+    .achiItem {
+        max-width: 220px;
+    }
+
+    .tutcon > h1,
+    h1 {
+        font-size: 19px;
+    }
+
+    .programcontenar {
+        font-size: 20px;
+    }
+
+    .dowbtn {
+        font-size: 12px !important;
+        padding: 8px 14px !important;
+        bottom: 15px !important;
+        right: 10px !important;
+    }
+}
